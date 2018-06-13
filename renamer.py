@@ -9,6 +9,6 @@ for file in files:
     os.rename(file, "{}.jpg".format(i))
     i += 1
 
-last = open('last.txt', "w")
-last.write(str(i - 1))
-last.close
+with open('last.txt', "w") as f:
+    f.write(str(i - 1))
+    f.close
